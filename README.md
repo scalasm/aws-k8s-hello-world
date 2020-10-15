@@ -49,4 +49,6 @@ You code in your IDEs and deploy/run explicitly by typing:
 skaffold run --tag=dev
 ```
 
+(Note: if you don't specify the tag, then the `latest` will be used: keep this in mind with your K8S deployments!)
+
 Happy coding!
