@@ -10,14 +10,17 @@ It shows how to
 
 You will need the following in your system:
 * [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
-* a Kubernetes cluster like [Docker for Desktop CE](https://hub.docker.com/editions/community/docker-ce-desktop-windows) or 
-[Minikube](https://kubernetes.io/docs/setup/learning-environment/minikube/)
+* a local Kubernetes cluster like [Docker for Desktop CE](https://hub.docker.com/editions/community/docker-ce-desktop-windows) 
+or [Minikube](https://kubernetes.io/docs/setup/learning-environment/minikube/) if you want to develop with your local cluster.
+
+(Note: if you want to work directly with your remote AWS cluster, having a local cluster is not strictly needed but 
+strongly advised!)
 
 # Suggested
 
 ## IDE(s)
-* Install [Google Cloud Code extension for VS Code](https://marketplace.visualstudio.com/items?itemName=GoogleCloudTools.cloudcode)
-* Use [Google Cloud Code for IntelliJ](https://github.com/GoogleCloudPlatform/cloud-code-intellij)
+* If your are a **Visual Studio Code** user, install [Google Cloud Code extension for VS Code](https://marketplace.visualstudio.com/items?itemName=GoogleCloudTools.cloudcode)
+* If you have **IntelliJ**, use [Google Cloud Code for IntelliJ](https://github.com/GoogleCloudPlatform/cloud-code-intellij)
 
 ## Video and tutorials
 
