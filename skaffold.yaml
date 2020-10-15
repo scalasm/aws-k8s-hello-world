@@ -1,0 +1,31 @@
+apiVersion: skaffold/v2beta7
+kind: Config
+
+metadata:
+  name: hello-world
+
+build:
+  artifacts:
+  - image: hello-world
+    context: .
+    jib: {}
+
+deploy:
+  kustomize:
+    paths:
+    - kustomization/base
+
+profiles:
+  # Local cluster - we build and deploy things locally
+  - name: local
+    build:
+      local:
+        push: false
+    activation:
+      - kubeContext: docker-desktop
+  # AWS EKS - does not build anything and will just push local images to remote ECR
+  - name: aws
+    deploy:
+      kustomize:
+        paths:
+          - kustomization/aws

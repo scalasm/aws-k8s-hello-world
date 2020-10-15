@@ -1,0 +1,21 @@
+##
+## Spring Configuration
+##
+spring:
+  application:
+    name: core-banking-service
+#  main:
+#    lazy-initialization: true
+#  main:
+#    allow-bean-definition-overriding: true
+
+##
+## Spring Configuration
+##
+management:
+  info:
+    git:
+      mode: full
+  endpoint:
+    health:
+      enabled: true
