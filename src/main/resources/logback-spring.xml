@@ -1,0 +1,17 @@
+<!--
+    This file is required for tuning the TestContainers.org verbosity.
+    See https://www.testcontainers.org/supported_docker_environment/logging_config/ .
+-->
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="me.marioscalas" level="debug"/>
+
+    <root level="warn">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
