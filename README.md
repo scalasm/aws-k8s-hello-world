@@ -1,10 +1,10 @@
 # Hello World w/ Spring Boot and Skaffold
 
-This is a sample project for demo purposes, providing a simple RESTful API for saluting.
+This is a sample project for demo purposes, providing a simple RESTful API with a simple HTTP POST endpoint.
 
 It shows how to 
 1. package a Spring Boot app into a Docker image, using [Skaffold](https://skaffold.dev/) and [Google Jib](https://github.com/GoogleContainerTools/jib);
-2. Deploy it into your Kubernetes cluster
+2. Deploy it into your Kubernetes cluster.
 
 # Requirements
 
@@ -14,8 +14,7 @@ You will need the following in your system:
 * a local Kubernetes cluster like [Docker for Desktop CE](https://hub.docker.com/editions/community/docker-ce-desktop-windows) 
 or [Minikube](https://kubernetes.io/docs/setup/learning-environment/minikube/) if you want to develop with your local cluster.
 
-(Note: if you want to work directly with your remote AWS cluster, having a local cluster is not strictly needed but 
-strongly advised!)
+(Note: if you want to work directly with your remote AWS cluster, having a local cluster is not strictly needed but strongly advised!)
 
 # Suggested
 
@@ -73,17 +72,16 @@ You have to do the docker login first and then run Skaffold. For example, when u
 account id and region):
 
 ```shell script
-C:\src\demo\hello-world>aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin xxxxxxxxxxxxxxx.dkr.ecr.eu-central-1.amazonaws.com
+mario@Sharkey:~/src/medium-articles/aws-k8s-hello-world$ aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin xxxxxxxxxxxxxxx.dkr.ecr.eu-central-1.amazonaws.com
 Login Succeeded
 ```
 
 ```shell script
-C:\src\spektor\hello-world>skaffold run -p aws --tag=dev --default-repo xxxxxxxxxxxxxxx.dkr.ecr.eu-central-1.amazonaws.com/hello-world-app
+mario@Sharkey:~/src/medium-articles/aws-k8s-hello-world$ skaffold run -p aws --tag=dev --default-repo xxxxxxxxxxxxxxx.dkr.ecr.eu-central-1.amazonaws.com/hello-world-app
 Generating tags...
  - hello-world -> xxxxxxxxxxxxxxx.dkr.ecr.eu-central-1.amazonaws.com/hello-world-app/hello-world:dev
 Checking cache...
  - hello-world: Found. Pushing
 ...
 ...
-
 ```
