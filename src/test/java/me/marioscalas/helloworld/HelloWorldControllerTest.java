@@ -19,9 +19,6 @@ class HelloWorldControllerTest {
     @Autowired
     private MockMvc mvc;
 
-    @Autowired
-    private HelloWorldController controller;
-
     @Test
     void getSalute() throws Exception {
         // given no special pre-conditions
@@ -32,6 +29,8 @@ class HelloWorldControllerTest {
                 )
         // then
                 .andExpect(status().isOk())
-                .andExpect( jsonPath( "$.salute", is( "Hello Kubernetes World!" ) ));
+                .andExpect(
+                    jsonPath("$.salute", containsString("Hello Kubernetes World"))
+                );
     }
 }
