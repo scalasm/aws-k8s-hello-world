@@ -2,6 +2,7 @@ kind: ConfigMap
 apiVersion: v1
 metadata:
   name: hello-world-cm
+  namespace: hello-world
 data:
   # References to SPRING ACTIVE PROFILE to run service
   SPRING_PROFILES_ACTIVE: "default"

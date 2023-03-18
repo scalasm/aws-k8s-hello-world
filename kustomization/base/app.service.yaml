@@ -2,6 +2,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: hello-world-svc
+  namespace: hello-world
 spec:
   selector:
     app: hello-world
@@ -9,4 +10,4 @@ spec:
   - protocol: "TCP"
     port: 8080
     targetPort: 8080
-  type: NodePort
+  type: LoadBalancer
