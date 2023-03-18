@@ -1,0 +1,5 @@
+# Application namespace (can be overridden in Kustomization overlays)
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: hello-world

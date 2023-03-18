@@ -1,4 +1,4 @@
-apiVersion: skaffold/v2beta8
+apiVersion: skaffold/v4beta2
 kind: Config
 
 metadata:
@@ -10,7 +10,7 @@ build:
     context: .
     jib: {}
 
-deploy:
+manifests:
   kustomize:
     paths:
     - kustomization/base
@@ -25,7 +25,7 @@ profiles:
       - kubeContext: docker-desktop
   # AWS EKS - does not build anything and will just push local images to remote ECR
   - name: aws
-    deploy:
+    manifests:
       kustomize:
         paths:
-          - kustomization/aws
+          - kustomization/overlays/aws

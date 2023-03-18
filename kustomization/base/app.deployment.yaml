@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hello-world
+  namespace: hello-world
   labels:
     app: hello-world
 spec:
@@ -12,6 +13,7 @@ spec:
       app: hello-world
   template:
     metadata:
+      namespace: hello-world
       labels:
         app: hello-world
     spec:
@@ -58,3 +60,15 @@ spec:
               configMapKeyRef:
                 name: hello-world-cm
                 key: SPRING_PROFILES_ACTIVE
+          - name: MY_POD_NAME
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.name
+          - name: MY_POD_NAMESPACE
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.namespace
+          - name: MY_POD_IP
+            valueFrom:
+              fieldRef:
+                fieldPath: status.podIP
