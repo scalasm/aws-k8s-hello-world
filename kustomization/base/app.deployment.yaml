@@ -20,6 +20,7 @@ spec:
       containers:
       - name: hello-world
         image: hello-world
+        imagePullPolicy: IfNotPresent
         # Check run that if you have hope that restarting will help!
         # The Readiness state tells whether the application is ready to accept client requests.
         readinessProbe:
