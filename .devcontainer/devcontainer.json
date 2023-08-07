@@ -45,7 +45,7 @@
 			},
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
-				"pivotal.vscode-spring-boot",
+				"vmware.vscode-spring-boot",
 				"vscjava.vscode-java-pack",
 				"GabrielBB.vscode-lombok",
 				"amazonwebservices.aws-toolkit-vscode",
@@ -54,7 +54,8 @@
 				"redhat.vscode-yaml",
 				"redhat.fabric8-analytics",
 				"jebbs.plantuml",
-				"humao.rest-client"
+				"humao.rest-client",
+				"ms-kubernetes-tools.vscode-kubernetes-tools"
 			]
 		}
 	},
@@ -78,12 +79,10 @@
 		// within the dev container too
 		"source=${localEnv:HOME}/.docker,target=/home/vscode/.docker,type=bind,consistency=cached",
 		"source=${localEnv:HOME}/.kube,target=/home/vscode/.kube,type=bind,consistency=cached",
-		//"source=${localEnv:HOME}/.docker,target=/home/vscode/.docker,type=bind,consistency=cached",
-		// Re-use local AWS configuration
+		// Re-Use location configs: AWS config, SSH keys, Git repository, M2 local repository
 		"source=${localEnv:HOME}/.aws,target=/home/vscode/.aws,type=bind,consistency=cached",
-		// Re-use local Git configuration
+		"source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached",
 		"source=${localEnv:HOME}/.gitconfig,target=/home/vscode/.gitconfig,type=bind,consistency=cached",
-		// Maven cache will be shared with my local system
 		"source=${localEnv:HOME}/.m2,target=/home/vscode/.m2,type=bind,consistency=cached"
 	]
 }

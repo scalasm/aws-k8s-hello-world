@@ -59,7 +59,8 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
      && apt-get -y install --no-install-recommends python3-pip
 
 # Required for access to AWS CodeCommit repositories using codecommit://<profile>@<repo-name> syntax
-RUN su vscode -c "sudo pip install git-remote-codecommit"
+# This does not work with Python 3.11 and requires either pipx or other VENV installation
+#RUN su vscode -c "sudo pip install git-remote-codecommit"
 
 # Graphviz is required for PlantUML extension
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
