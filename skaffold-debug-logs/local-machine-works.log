@@ -1,0 +1,119 @@
+mario@iqube64:~/src/learning/aws-k8s-hello-world$ skaffold run
+Generating tags...
+ - hello-world -> hello-world:1937906-dirty
+Checking cache...
+ - hello-world: Not found. Building
+Starting build...
+Found [docker-desktop] context, using local docker daemon.
+Building [hello-world]...
+Target platforms: [linux/amd64]
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------< me.marioscalas.helloworld:hello-world >----------------
+[INFO] Building hello-world 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- jib-maven-plugin:3.3.2:_skaffold-fail-if-jib-out-of-date (default-cli) @ hello-world ---
+[INFO] 
+[INFO] ---------------< me.marioscalas.helloworld:hello-world >----------------
+[INFO] Building hello-world 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:resources (default-resources) @ hello-world ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.11.0:compile (default-compile) @ hello-world ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:testResources (default-testResources) @ hello-world ---
+[INFO] Copying 1 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.11.0:testCompile (default-testCompile) @ hello-world ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0:test (default-test) @ hello-world ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running me.marioscalas.helloworld.HelloWorldControllerTest
+20:42:52.755 [main] INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [me.marioscalas.helloworld.HelloWorldControllerTest]: HelloWorldControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+20:42:52.829 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration me.marioscalas.helloworld.HelloWorldApplication for test class me.marioscalas.helloworld.HelloWorldControllerTest
+               _  _          __    __               _      _
+  /\  /\  ___ | || |  ___   / / /\ \ \  ___   _ __ | |  __| |
+ / /_/ / / _ \| || | / _ \  \ \/  \/ / / _ \ | '__|| | / _` |
+/ __  / |  __/| || || (_) |  \  /\  / | (_) || |   | || (_| |
+\/ /_/   \___||_||_| \___/    \/  \/   \___/ |_|   |_| \__,_|
+Using Spring Boot 3.1.2
+
+20:42:53.033 [main] INFO  me.marioscalas.helloworld.HelloWorldControllerTest - Starting HelloWorldControllerTest using Java 17.0.5 with PID 11711 (started by mario in /home/mario/src/learning/aws-k8s-hello-world)
+20:42:53.033 [main] INFO  me.marioscalas.helloworld.HelloWorldControllerTest - No active profile set, falling back to 1 default profile: "default"
+20:42:53.527 [main] INFO  org.springframework.boot.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+20:42:53.527 [main] INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+20:42:53.529 [main] INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+20:42:53.547 [main] INFO  me.marioscalas.helloworld.HelloWorldControllerTest - Started HelloWorldControllerTest in 0.689 seconds (process running for 1.273)
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.432 s - in me.marioscalas.helloworld.HelloWorldControllerTest
+[INFO] Running me.marioscalas.helloworld.HelloWorldApplicationTests
+20:42:54.054 [main] INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [me.marioscalas.helloworld.HelloWorldApplicationTests]: HelloWorldApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+20:42:54.055 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration me.marioscalas.helloworld.HelloWorldApplication for test class me.marioscalas.helloworld.HelloWorldApplicationTests
+               _  _          __    __               _      _
+  /\  /\  ___ | || |  ___   / / /\ \ \  ___   _ __ | |  __| |
+ / /_/ / / _ \| || | / _ \  \ \/  \/ / / _ \ | '__|| | / _` |
+/ __  / |  __/| || || (_) |  \  /\  / | (_) || |   | || (_| |
+\/ /_/   \___||_||_| \___/    \/  \/   \___/ |_|   |_| \__,_|
+Using Spring Boot 3.1.2
+
+20:42:54.087 [main] INFO  me.marioscalas.helloworld.HelloWorldApplicationTests - Starting HelloWorldApplicationTests using Java 17.0.5 with PID 11711 (started by mario in /home/mario/src/learning/aws-k8s-hello-world)
+20:42:54.087 [main] INFO  me.marioscalas.helloworld.HelloWorldApplicationTests - No active profile set, falling back to 1 default profile: "default"
+20:42:54.663 [main] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+20:42:54.689 [main] INFO  me.marioscalas.helloworld.HelloWorldApplicationTests - Started HelloWorldApplicationTests in 0.626 seconds (process running for 2.415)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.67 s - in me.marioscalas.helloworld.HelloWorldApplicationTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jib-maven-plugin:3.3.2:dockerBuild (default-cli) @ hello-world ---
+[INFO] 
+[INFO] Containerizing application to Docker daemon as hello-world:1937906-dirty...
+[WARNING] Base image 'amazoncorretto:17' does not use a specific image digest - build may not be reproducible
+[INFO] Getting manifest for base image amazoncorretto:17...
+[INFO] Building dependencies layer...
+[INFO] Building resources layer...
+[INFO] Building classes layer...
+[INFO] Building jvm arg files layer...
+[INFO] The base image requires auth. Trying again for amazoncorretto:17...
+[INFO] Using credentials from Docker config (/home/mario/.docker/config.json) for amazoncorretto:17
+[INFO] Using base image with digest: sha256:4065444cc60404ae12deaa871cf96e40a598d8f02cec02910078f1d5f8a71a6e
+[INFO] 
+[INFO] Container entrypoint set to [java, -cp, @/app/jib-classpath-file, me.marioscalas.helloworld.HelloWorldApplication]
+[INFO] Loading to Docker daemon...
+[INFO] 
+[INFO] Built image to Docker daemon as hello-world:1937906-dirty
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  24.876 s
+[INFO] Finished at: 2023-08-07T20:43:16+01:00
+[INFO] ------------------------------------------------------------------------
+Build [hello-world] succeeded
+Starting test...
+Tags used in deployment:
+ - hello-world -> hello-world:92edeb49ee039ac1577583e0624298d260823a8ed4e854b7b82812653c3191c1
+Starting deploy...
+ - namespace/hello-world unchanged
+ - configmap/hello-world-cm unchanged
+ - service/hello-world-svc configured
+ - deployment.apps/hello-world configured
+Waiting for deployments to stabilize...
+ - hello-world:deployment/hello-world: waiting for rollout to finish: 1 old replicas are pending termination...
+ - hello-world:deployment/hello-world is ready.
+Deployments stabilized in 31.063 seconds
+You can also run [skaffold run --tail] to get the logs
+
+mario@iqube64:~/src/learning/aws-k8s-hello-world$ 

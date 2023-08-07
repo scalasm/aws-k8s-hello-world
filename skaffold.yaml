@@ -1,10 +1,12 @@
-apiVersion: skaffold/v4beta2
+apiVersion: skaffold/v4beta6
 kind: Config
 
 metadata:
   name: hello-world
 
 build:
+  tagPolicy:
+    gitCommit: {}
   artifacts:
   - image: hello-world
     context: .

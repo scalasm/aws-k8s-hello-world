@@ -1,3 +1,8 @@
+# Current situation
+- when running from inside a container, Kubernetes cannot see the docker image built with skaffold. I believe this is related to how Skaffold and JIB work together - the image built by JIB inside the container is not visible to the docker daemon. No clue.
+
+It works when running locally.
+
 # Hello World w/ Spring Boot and Skaffold
 
 This is a sample project for demo purposes, providing a simple RESTful API with a simple HTTP POST endpoint.
@@ -63,6 +68,12 @@ Happy coding!
 ```
 skaffold delete
 ```
+
+# Open API
+
+This project uses [SpringDoc](https://springdoc.org/). 
+
+By default the UI is accessible at http://localhost:8080/swagger-ui.html .
 
 # FAQ
 
