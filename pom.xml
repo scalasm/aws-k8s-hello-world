@@ -44,6 +44,12 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>2.2.0</version>
+        </dependency>    
     </dependencies>
 
     <build>
@@ -59,14 +65,17 @@
             <plugin>
                 <groupId>com.google.cloud.tools</groupId>
                 <artifactId>jib-maven-plugin</artifactId>
-                <version>3.3.1</version>
+                <version>3.3.2</version>
                 <configuration>
+                    <from>
+                        <image>amazoncorretto:17</image>
+                    </from>
                     <container>
+                        <mainClass>me.marioscalas.helloworld.HelloWorldApplication</mainClass>
                         <user>nobody:nobody</user>
                     </container>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
 </project>
