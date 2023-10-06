@@ -1,5 +1,5 @@
 #!/bin/bash
-set -ex
+set -e
 
 ##
 ## Create some aliases
@@ -16,26 +16,20 @@ WORKSPACE_DIR=$(pwd)
 ## Print Versions, for references
 ##
 
-# Change some Poetry settings to better deal with working in a container
 java --version
-
-# Support runtimes
-node --version
-npm --version
 python3 --version
 
 # AWS
 aws --version
-cdk --version
 
 # Docker
 docker --version 
 docker-compose --version 
 
 # K8s 
-kubectl version
-kustomize version
-skaffold version
-helm version
+#kubectl version
+#kustomize version
+#skaffold version
+#helm version
 
 echo "Done!"
