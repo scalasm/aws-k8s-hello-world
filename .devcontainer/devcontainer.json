@@ -27,7 +27,8 @@
 		"ghcr.io/devcontainers-contrib/features/kubectx-kubens:1": {
 			"version": "latest"
 		},
-		"./local-features/copy-kube-config": {}		
+		"./local-features/copy-kube-config": {},
+		"ghcr.io/rio/features/skaffold": {}
 	},
 
 	"containerEnv": {
